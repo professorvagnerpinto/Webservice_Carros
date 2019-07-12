@@ -47,6 +47,8 @@ public class CarrosFragment extends BaseFragment
     private List<Carro> carros;
     //o tipo de carro que é recebido como argumento na construção do fragmento
     private String tipo;
+    //a lista temporária quando se pesquisa por um carro
+    List<Carro> carroList = new ArrayList<>();
 
     /*
         Método do ciclo de vida do Fragment.
@@ -197,7 +199,7 @@ public class CarrosFragment extends BaseFragment
     public boolean onQueryTextChange(String newText) {
 
         //uma lista para nova camada de modelo da RecyclerView
-        List<Carro> carroList = new ArrayList<>();
+        carroList = new ArrayList<>();
 
         //um for-eatch na lista de carros
         for(Carro carro : carros){
@@ -225,8 +227,14 @@ public class CarrosFragment extends BaseFragment
             // Aqui trata o evento onItemClick.
             @Override
             public void onClickCarro(View view, int idx) {
-                //armazena o carro que foi clicado na RecyclerView
-                Carro carro = carros.get(idx);
+                Carro carro;
+                if(carroList.isEmpty()){
+                    //armazena o carro que foi clicado na RecyclerView
+                    carro = carros.get(idx);
+                }else{
+                    //armazena o carro que foi clicado na RecyclerView
+                    carro = carroList.get(idx);
+                }
                 //chama outra Activity para detalhar ou editar o carro clicado pelo usuário
                 //configura uma Intent explícita
                 Intent intent = new Intent(getContext(), CarroActivity.class);
