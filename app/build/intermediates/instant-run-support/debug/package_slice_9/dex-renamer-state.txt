@@ -1,0 +1,4 @@
+#Fri May 18 09:50:00 BRT 2018
+base.0=C\:\\Users\\vpsil\\AndroidStudioProjects\\Webservice_Carros\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_9
+renamed.0=classes.dex
+file.0=C\:\\Users\\vpsil\\AndroidStudioProjects\\Webservice_Carros\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_9\\classes.dex

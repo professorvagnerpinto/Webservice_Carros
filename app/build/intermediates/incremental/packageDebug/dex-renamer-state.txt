@@ -1,0 +1,7 @@
+#Fri May 18 09:50:01 BRT 2018
+base.0=C\:\\Users\\vpsil\\AndroidStudioProjects\\Webservice_Carros\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_efdc9a4acf0e6a6c9d0ef67626307750c5ca59fd
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=C\:\\Users\\vpsil\\AndroidStudioProjects\\Webservice_Carros\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_c4a3078565827a3e0dbd1a07ffc26e3ef61ec0f0\\classes.dex
+base.1=C\:\\Users\\vpsil\\AndroidStudioProjects\\Webservice_Carros\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_c4a3078565827a3e0dbd1a07ffc26e3ef61ec0f0
+file.0=C\:\\Users\\vpsil\\AndroidStudioProjects\\Webservice_Carros\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_efdc9a4acf0e6a6c9d0ef67626307750c5ca59fd\\classes.dex

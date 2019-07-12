@@ -1,0 +1,55 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
+
+    defaultConfig {
+        applicationId "aulas.ddmi.webservice_carros"
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    //para evitar erros de compilação com o jackson, adicione esta instrução
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //para trabalhar com o modo de compatibilidade
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support:cardview-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.android.support:support-vector-drawable:28.0.0'
+    //para realizar download de imagens
+    implementation 'com.squareup.picasso:picasso:2.4.0'
+    //para trabalhar com o maps
+    implementation 'com.google.android.gms:play-services:11.0.4'
+    implementation 'com.google.android.gms:play-services-maps:11.0.4'
+    //para realizar requisições REST
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    //para interceptar as requests e as responses no LogCat
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.9.0'
+    //para converter JSON
+    //compile 'com.squareup.retrofit2:converter-jackson:2.3.0'
+    //alternativa ao Jackson (opção utilizada neste projeto GSON)
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}
